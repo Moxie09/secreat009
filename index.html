@@ -1,3 +1,18 @@
+rats
+<script type="text/javascript">
+     function prepare_link() {
+          var url_param = document.getElementById('url_param');
+          var target_link = document.getElementById('target_link');
 
-<input type="text" id="suffix" />
-<a href="https://moxie09.github.io/secreat009/" onclick="document.location.href = $(this).attr('href')+$('#suffix').val(); return false;">click me</a>
+          if ( ! url_param.value ) {
+               return false;  
+          }
+
+          target_link.href = target_link.href + '/' + escape(url_param.value);
+     }
+</script>
+
+<input type="text" name="url_param" id="url_param" />
+<input type="button" onclick="prepare_link();" value="Do it!" />
+
+<a href="http://whatever.com" id="target_link">Click Your New Link!</a>
